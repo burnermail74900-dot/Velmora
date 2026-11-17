@@ -1,0 +1,1 @@
+import type {Metadata} from "next";import ContactPage from "@/components/contact-page";export const metadata:Metadata={title:"Enquire about erotic fiction"};export default async function Contact({searchParams}:{searchParams:Promise<{service?:string}>}){const params=await searchParams;return <ContactPage initialService={params.service||""}/>}

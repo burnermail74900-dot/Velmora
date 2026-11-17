@@ -1,0 +1,2 @@
+import { z } from "zod";
+export const contactSchema=z.object({name:z.string().max(100).optional().default(""),email:z.union([z.email().max(254),z.literal("")]).optional().default(""),service_slug:z.string().max(80).optional().default(""),preferred_platform:z.enum(["Instagram","Telegram","Reddit","Email"]),message:z.string().min(10).max(3000),instructions:z.string().max(2000).optional().default(""),website:z.string().max(0).optional().default("")});

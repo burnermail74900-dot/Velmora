@@ -1,0 +1,3 @@
+import type {Metadata} from "next";import "./globals.css";import {Header} from "@/components/header";import {Footer} from "@/components/footer";
+export const metadata:Metadata={title:{default:"Velmora — Personalised Erotic Fiction",template:"%s | Velmora"},description:"An 18+ personalised erotica studio for custom erotic stories, explicit adult-fiction concepts, fictional adult characters and inquiry-based roleplay. Enquiry-only; subject to legal and platform eligibility.",metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||"http://localhost:3000"),robots:{index:true,follow:true}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><Header/><main>{children}</main><Footer/></body></html>}
