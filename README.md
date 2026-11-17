@@ -60,26 +60,3 @@ Run the complete `supabase/schema.sql`. On an existing installation, the final m
 4. Set `NEXT_PUBLIC_SITE_URL` to the production HTTPS origin.
 5. Run the latest SQL schema in Supabase and verify RLS policies.
 6. Deploy and test direct links, mobile layouts, form submissions, admin login and RLS from anon/authenticated/admin accounts.
-
-## Administrator access
-
-Supabase Auth handles login. The admin routes check the authenticated user server-side; database RLS independently checks `auth.jwt() -> 'app_metadata' ->> 'role' = 'admin'`. Assign this claim only to the owner in Supabase's trusted admin interface. Never hardcode an admin password or ship a service-role key to the client.
-
-The admin dashboard provides a protected enquiry overview. Full detail editing, bulk deletion, portfolio/FAQ editing and service management UI are not implemented; use the Supabase dashboard as the trusted administration console until those interfaces are built.
-
-## Before launch
-
-- [ ] Obtain qualified legal review for the commercial offering of erotic fiction in India and each target market before accepting or fulfilling any commission.
-- [ ] Obtain written approval from each relevant communication, hosting, AI and payment provider where required by its policies. Direct messaging or off-platform arrangements do not bypass applicable law or platform rules.
-- [ ] Keep adult category flags disabled until the preceding legal and provider reviews are complete.
-- [ ] Confirm service scope, delivery estimates, revision policy, cancellation/refund terms and the business contact channels are monitored.
-- [ ] Replace the launch-stage privacy notice with a legally reviewed policy matching actual processors, retention and deletion operations.
-- [ ] Configure production-grade rate limiting and abuse protection; the honeypot is only a basic deterrent.
-- [ ] Configure backups, monitoring, error reporting and email notification delivery if desired.
-- [ ] Test mobile breakpoints, navigation, valid/invalid form submissions, unauthenticated admin access and RLS.
-- [ ] Keep the adult category hard-disabled until legal and platform-policy clearance is documented. All customers and characters must be adults; reject minors, non-consensual real-person sexual depictions, exploitation and other prohibited requests.
-- [ ] Confirm brand availability for trademark/domain use before commercial launch.
-
-## Known limitations
-
-This is a deployable application source project, not a hosted live website. It requires Supabase configuration and a deployment account for persistent form submissions and admin access. No email notifications, production-grade rate limiting, live chat, full admin CMS, in-app customer deletion workflow or legal certification is claimed. The direct contact channels and service enquiry links work independently of the backend.
